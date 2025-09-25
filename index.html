@@ -2,22 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <style>
-        body { font-family: Arial; margin: 20px; }
-        h1 { color: darkblue; }
-        .project { margin-bottom: 20px; }
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Top navigation bar */
+        nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 20px;
+        }
+
+        #showcase { background-color: #f2f2f2; }
+        #about { background-color: #e6e6e6; }
+        #interactive { background-color: #d9d9d9; }
     </style>
 </head>
 <body>
-    <h1>My Projects</h1>
-    <div class="project">
-        <h2>Robot Arm Controller</h2>
-        <p>C++ project controlling a robotic arm using servo motors.</p>
-    </div>
-    <div class="project">
-        <h2>Pathfinding Simulator</h2>
-        <p>A* algorithm visualization in C++.</p>
-    </div>
+
+    <!-- Top Navigation Bar -->
+    <nav>
+        <a href="#showcase">Showcase</a>
+        <a href="#about">About Me</a>
+        <a href="#interactive">Interactive</a>
+    </nav>
+
+    <!-- Sections -->
+    <section id="showcase">
+        <h1>Showcase</h1>
+        <p>Here you can display your projects and work.</p>
+    </section>
+
+    <section id="about">
+        <h1>About Me</h1>
+        <p>Introduce yourself here. Share your skills, experience, and interests.</p>
+    </section>
+
+    <section id="interactive">
+        <h1>Interactive</h1>
+        <p>Add interactive demos, widgets, or experiments here.</p>
+    </section>
+
 </body>
 </html>
