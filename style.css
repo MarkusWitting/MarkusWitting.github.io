@@ -7,6 +7,7 @@
 body {
     font-size: 30px;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 /* Sidebars */
@@ -16,7 +17,7 @@ body {
     width: 20px;
     height: 100%;
     background-color: #3498db;
-    transition: width 0.3s;
+    transition: width 0.3s, left 0.3s, right 0.3s;
     z-index: 1000;
     cursor: pointer;
 }
@@ -31,13 +32,33 @@ body {
 
 /* Content area */
 #content {
-    margin-left: 20px;
-    margin-right: 20px;
+    position: fixed;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    margin: 0;
     padding: 20px;
-    transition: margin 0.3s;
+    background: #fff;
+    z-index: 1100;
+    overflow-y: auto;
+    transition: left 0.3s, right 0.3s;
 }
 
 /* Expanded state */
 .sidebar.expanded {
     width: 50px;
+}
+
+/* Expanded to 90% on click */
+.sidebar.max-expanded {
+    width: 90vw !important;
+}
+
+#left-sidebar.max-expanded {
+    left: 0;
+}
+
+#right-sidebar.max-expanded {
+    right: 0;
 }
