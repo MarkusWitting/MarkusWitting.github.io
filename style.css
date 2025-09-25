@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebars */
+.sidebar {
+    position: fixed;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background-color: #3498db;
+    transition: width 0.3s;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#left-sidebar {
+    left: 0;
+}
+
+#right-sidebar {
+    right: 0;
+}
+
+/* Content area */
+#content {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    transition: margin 0.3s;
+}
+
+/* Expanded state */
+.sidebar.expanded {
+    width: 50px;
+}

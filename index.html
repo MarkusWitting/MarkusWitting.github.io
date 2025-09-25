@@ -3,72 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
-    <style>
-        /* Basic reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Top navigation bar */
-        nav {
-            background-color: #333;
-            color: white;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 1rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            transition: background 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #555;
-            border-radius: 5px;
-        }
-
-        /* Sections */
-        section {
-            padding: 50px 20px;
-        }
-
-        #showcase { background-color: #f2f2f2; }
-        #about { background-color: #e6e6e6; }
-        #interactive { background-color: #d9d9d9; }
-    </style>
+    <title>Dynamic Sidebars</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="left-sidebar" class="sidebar"></div>
+    <div id="right-sidebar" class="sidebar"></div>
 
-    <!-- Top Navigation Bar -->
-    <nav>
-        <a href="#showcase">Showcase</a>
-        <a href="#about">About Me</a>
-        <a href="#interactive">Interactive</a>
-    </nav>
+    <div id="content">
+        <h1>Welcome to the Dynamic Sidebar Page</h1>
+        <p>Hover over the sidebars to see them expand and the content shift accordingly.</p>
+    </div>
 
-    <!-- Sections -->
-    <section id="showcase">
-        <h1>Showcase</h1>
-        <p>Here you can display your projects and work.</p>
-    </section>
-
-    <section id="about">
-        <h1>About Me</h1>
-        <p>Introduce yourself here. Share your skills, experience, and interests.</p>
-    </section>
-
-    <section id="interactive">
-        <h1>Interactive</h1>
-        <p>Add interactive demos, widgets, or experiments here.</p>
-    </section>
-
+    <script src="script.js"></script>
 </body>
 </html>
