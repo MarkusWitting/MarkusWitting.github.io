@@ -1,33 +1,99 @@
-/* Reset some defaults */
-body, h1, h2, p {
-    margin: 0;
-    background-color: #1C1B20;
-    padding: 0;
-    color: #E6E1E5;
-    font-family: Consolas, monospace;
-}
-
 body {
-    color: #E6E1E5;
-    padding: 20px;
+    margin: 0;
+    font-family: monospace;
+    background-color: #f5f5f5;
 }
 
-header {
-    margin-bottom: 20px;
+#container {
+    display: flex;
+    height: 100vh;
 }
 
-#name {
-    font-size: 2rem;
-}
-
+/* About Me section */
 #about {
-    padding: 15px;
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+    overflow: auto;
+    transition: flex 0.3s ease;
 }
 
-#about h2 {
-    margin-bottom: 10px;
+/* Sidebar */
+#sidebar {
+    width: 60px; /* Shrunken width */
+    background-color: #333;
+    color: #fff;
+    transition: width 0.3s ease, background 0.2s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
-#about p {
-    line-height: 1.5;
+#sidebar-toggle-area {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    height: 100vh;
+    background: transparent;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+}
+
+#sidebar-toggle {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    height: 100vh;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    transition: background 0.2s;
+    padding: 0;
+}
+
+#sidebar-toggle-area:hover, #sidebar-toggle:hover {
+    background-color: #555;
+}
+
+#sidebar.expanded #sidebar-toggle {
+    display: block;
+}
+
+/* Expanded sidebar */
+#sidebar.expanded {
+    width: 90%; /* Takes 90% of the screen */
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Sidebar content */
+#sidebar-content {
+    flex: 1 1 auto;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: transparent;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#sidebar.expanded #sidebar-content {
+    opacity: 1;
+}
+
+#sidebar:not(.expanded) #sidebar-content {
+    pointer-events: none;
 }

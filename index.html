@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markus Witting</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mark's Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1 id="name">Markus Witting</h1>
-    </header>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi! I'm Mark, a robotics student with a passion for programming, electronics, and building things that move. Welcome to my portfolio!</p>
-        </section>
-    </main>
+<div id="container">
+    <!-- Left: About Me -->
+    <section id="about">
+        <h1>About Me</h1>
+        <p>Hi! I'm Mark, a robotics student with a passion for programming, electronics, and building things that move.</p>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Sidebar (expandable, with always-visible button) -->
+    <div id="sidebar" class="shrunken">
+        <div id="sidebar-toggle-area">
+            <button id="sidebar-toggle" aria-label="Toggle Projects Sidebar">&#9776;</button>
+        </div>
+        <div id="sidebar-content">
+            <h2>Projects</h2>
+            <p>Project 1: Robotics Arm</p>
+            <p>Project 2: Neural Network Library</p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
