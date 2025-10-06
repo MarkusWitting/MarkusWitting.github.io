@@ -1,13 +1,14 @@
 /* Reset some defaults */
 body, h1, h2, p {
     margin: 0;
+    background-color: #1C1B20;
     padding: 0;
+    color: #E6E1E5;
     font-family: Consolas, monospace;
 }
 
 body {
-    background-color: #1C1B20;
-    color: #333;
+    color: #E6E1E5;
     padding: 20px;
 }
 
@@ -20,10 +21,7 @@ header {
 }
 
 #about {
-    background-color: #fff;
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 #about h2 {
